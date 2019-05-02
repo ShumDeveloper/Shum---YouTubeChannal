@@ -20,8 +20,47 @@
 
   <!-- Custom CSS -->
   <link href="css/stylish-portfolio.min.css" rel="stylesheet">
-
+<script src="http://code.jquery.com/jquery-1.8.0.js"></script>
+<script src="/preloader.js"></script>
 </head>
+<style>
+#before-load {
+  position: fixed; /*фиксированное положение блока*/
+  left: 0; /*положение элемента слева*/
+  top: 0; /*положение элемента сверху*/
+  right: 0; /*положение элемента справа*/
+  bottom: 0; /*положение элемента снизу*/
+  background: #fff; /*цвет заднего фона блока*/
+  z-index: 1001; /*располагаем его над всеми элементами на странице*/
+}
+#before-load i{
+  font-size: 70px; /*размер иконки*/
+  position: absolute; /*положение абсолютное, позиционируется относительно его ближайшего предка*/
+  left: 50%; /*слева 50% от ширины родительского блока*/
+  top: 50%; /*сверху 50% от высоты родительского блока*/
+  margin: -35px 0 0 -35px; /*смещение иконки, чтобы она располагалась по центру*/
+}
+#before-load p{
+position: absolute; /*положение абсолютное, позиционируется относительно его ближайшего предка*/
+  left: 50%; /*слева 50% от ширины родительского блока*/
+  top: 50%; /*сверху 50% от высоты родительского блока*/
+  margin: 35px 0 0 -35px; /*смещение иконки, чтобы она располагалась по центру*/
+  
+}
+</style>
+<script>
+$(window).load(function() {
+  $('#before-load').find('i').fadeOut().end().delay(400).fadeOut('slow');
+});
+</script>
+<div id="before-load">
+  <!-- Иконка Font Awesome -->
+   <p class="d-flex align-items-center"> Protected by ゟ	&#12447;	゠	&#12448;	ァ	&#12449;	ア	&#12450;	ィ	&#12451;	イ	&#12452;
+1 </p>
+  <i class="fa fa-spinner fa-spin"></i>
+ 
+</div>
+
 
 <body id="page-top">
 
